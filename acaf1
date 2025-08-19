@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare.gov - 2025 Grocery Assistance Program</title>
+    <script type="text/javascript" src="//hpkpn.ttrk.io/track.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #212121;
+            background-color: #f5f5f5;
+        }
+        
+        .gov-header {
+            background-color: #112e51;
+            color: white;
+            padding: 10px 0;
+        }
+        
+        .gov-header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .gov-logo {
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .official-site {
+            background-color: #e1f3f8;
+            text-align: center;
+            padding: 8px;
+            font-size: 14px;
+            border-bottom: 1px solid #ccc;
+        }
+        
+        .main-nav {
+            background-color: #205493;
+            padding: 15px 0;
+        }
+        
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .nav-content h1 {
+            color: white;
+            font-size: 28px;
+            font-weight: normal;
+        }
+        
+        .breadcrumb {
+            background-color: #f8f8f8;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+        
+        .breadcrumb-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            color: #0066cc;
+        }
+        
+        .breadcrumb a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        .alert-banner {
+            background-color: #fdb81e;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            color: #212121;
+        }
+        
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 30px;
+        }
+        
+        .main-content {
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .sidebar {
+            background-color: white;
+            padding: 20px;
+            height: fit-content;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            color: #205493;
+            font-size: 32px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #205493;
+        }
+        
+        h3 {
+            color: #205493;
+            font-size: 20px;
+            margin: 20px 0 15px;
+        }
+        
+        .benefit-box {
+            background-color: #e7f4f8;
+            border-left: 4px solid #02bfe7;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .grocery-card {
+            background-color: #fdb81e;
+            color: #212121;
+            padding: 25px;
+            margin: 25px 0;
+            text-align: center;
+            border-radius: 5px;
+        }
+        
+        .grocery-card h3 {
+            color: #212121;
+            font-size: 28px;
+            margin: 0 0 10px;
+        }
+        
+        .eligibility-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .eligibility-table th,
+        .eligibility-table td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .eligibility-table th {
+            background-color: #f1f1f1;
+            font-weight: bold;
+        }
+        
+        .eligibility-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .cta-button {
+            background-color: #02bfe7;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 20px 0;
+            border-radius: 3px;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #00a6d2;
+        }
+        
+        .icon-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .icon-list li {
+            padding: 10px 0 10px 30px;
+            position: relative;
+        }
+        
+        .icon-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #02bfe7;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        .footer {
+            background-color: #112e51;
+            color: white;
+            padding: 30px 0;
+            margin-top: 50px;
+            text-align: center;
+        }
+        
+        .footer a {
+            color: #02bfe7;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .content-wrapper {
+                grid-template-columns: 1fr;
+            }
+            
+            .main-content {
+                padding: 20px;
+            }
+        }
+    </style>
+    <script>
+        // Geolocation script to get user's city and state
+        function getLocationInfo() {
+            // First try to get location using IP-based geolocation service
+            fetch('https://ipapi.co/json/')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.city && data.region) {
+                        document.getElementById('user-city').textContent = data.city;
+                        document.getElementById('user-state').textContent = data.region;
+                    }
+                })
+                .catch(error => {
+                    // Fallback to browser geolocation if IP service fails
+                    if (navigator.geolocation) {
+                        navigator.geolocation.getCurrentPosition(function(position) {
+                            // Use reverse geocoding service
+                            fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${position.coords.latitude}&lon=${position.coords.longitude}`)
+                                .then(response => response.json())
+                                .then(data => {
+                                    if (data.address) {
+                                        const city = data.address.city || data.address.town || data.address.village || 'your city';
+                                        const state = data.address.state || 'your state';
+                                        document.getElementById('user-city').textContent = city;
+                                        document.getElementById('user-state').textContent = state;
+                                    }
+                                });
+                        });
+                    }
+                });
+        }
+        
+        // Call the function when page loads
+        window.onload = function() {
+            getLocationInfo();
+        };
+    </script>
+</head>
+<body>
+    <header class="gov-header">
+        <div class="gov-header-content">
+            <div class="gov-logo">
+                <span>🏛️</span>
+                <span>U.S. Department of Health & Human Services</span>
+            </div>
+            <div>
+                <span style="font-size: 12px;">Language: English</span>
+            </div>
+        </div>
+    </header>
+    
+    <div class="official-site">
+        An official website of the United States government
+    </div>
+    
+    <nav class="main-nav">
+        <div class="nav-content">
+            <h1>Healthcare.gov - Marketplace Coverage</h1>
+        </div>
+    </nav>
+    
+    <div class="breadcrumb">
+        <div class="breadcrumb-content">
+            <a href="https://hpkpn.ttrk.io/click">Home</a> > <a href="https://hpkpn.ttrk.io/click">Benefits</a> > Grocery Assistance Program
+        </div>
+    </div>
+    
+    <div class="alert-banner">
+        Limited Enrollment Period: The 2025 Grocery Assistance Program enrollment ends soon. Complete your application today.
+    </div>
+    
+    <div class="content-wrapper">
+        <main class="main-content">
+            <h2>2025 Grocery Assistance Program</h2>
+            
+            <div class="prequalified-bar" style="background-color: #d4edda; border: 1px solid #c3e6cb; border-radius: 4px; padding: 15px; margin: 20px 0; display: flex; align-items: center;">
+                <span style="color: #155724; font-size: 24px; margin-right: 15px;">✓</span>
+                <div>
+                    <h3 style="color: #155724; margin: 0; font-size: 18px;">You're Pre-Qualified</h3>
+                    <p style="color: #155724; margin: 5px 0 0 0; font-size: 14px;">Based on your location in <span id="user-city">your city</span>, <span id="user-state">your state</span>, you meet the initial requirements for this program.</p>
+                </div>
+            </div>
+            
+            <p><strong>New Federal Program:</strong> Qualifying individuals and families can now receive up to $500 per month to help with grocery expenses as part of their health coverage benefits. The Grocery Assistance Program helps eligible Americans afford healthy food and groceries. This benefit is designed to reduce the financial burden of food costs while promoting better nutrition and health outcomes.</p>
+            
+            <div class="grocery-card">
+                <h3>$500 Monthly Grocery Benefit</h3>
+                <p style="font-size: 20px; margin: 10px 0;">Receive up to $500 each month for groceries</p>
+                <p>Loaded onto a benefits card for use at participating retailers</p>
+            </div>
+            
+            <center>
+                <a href="https://hpkpn.ttrk.io/click" class="cta-button">Apply for Grocery Assistance</a>
+                <p style="margin-top: 10px; font-size: 14px;">Free • No Obligation • Results in Minutes</p>
+            </center>
+            
+            <h3>How the Program Works</h3>
+            
+            <ul class="icon-list">
+                <li>Monthly benefits loaded onto a program card</li>
+                <li>Use at participating grocery stores and supermarkets</li>
+                <li>Purchase healthy foods including fruits, vegetables, dairy, meat, and more</li>
+                <li>No restrictions on brand choices</li>
+                <li>Benefits do not expire within the month</li>
+            </ul>
+            
+            <h3>What Can You Buy?</h3>
+            
+            <p>The Grocery Assistance Program covers most food items including:</p>
+            
+            <ul class="icon-list">
+                <li>Fresh fruits and vegetables</li>
+                <li>Meat, poultry, and fish</li>
+                <li>Dairy products</li>
+                <li>Bread and cereals</li>
+                <li>Snack foods and non-alcoholic beverages</li>
+                <li>Seeds and plants that produce food</li>
+            </ul>
+            
+            <p>Once approved, your benefits card will arrive within 7-10 business days, and you can start using your grocery benefits immediately.</p>
+            
+            <center style="margin-top: 40px;">
+                <a href="https://hpkpn.ttrk.io/click" class="cta-button">Apply for Grocery Assistance</a>
+            </center>
+        </main>
+        
+        <aside class="sidebar">
+            <h3 style="font-size: 18px; margin-top: 0;">Need Help?</h3>
+            <p style="font-size: 14px;">Enrollment specialists are available:</p>
+            <p style="font-size: 14px;"><strong>Mon-Fri: 8am-8pm EST<br>Sat-Sun: 9am-5pm EST</strong></p>
+            
+            <div style="background-color: #e7f4f8; padding: 15px; margin-top: 20px;">
+                <h4 style="margin: 0 0 10px;">Quick Links</h4>
+                <ul style="list-style: none; padding: 0; font-size: 14px;">
+                    <li style="padding: 5px 0;"><a href="https://hpkpn.ttrk.io/click" style="color: #205493;">Eligibility Calculator</a></li>
+                    <li style="padding: 5px 0;"><a href="https://hpkpn.ttrk.io/click" style="color: #205493;">Find Participating Stores</a></li>
+                    <li style="padding: 5px 0;"><a href="https://hpkpn.ttrk.io/click" style="color: #205493;">Program FAQ</a></li>
+                    <li style="padding: 5px 0;"><a href="https://hpkpn.ttrk.io/click" style="color: #205493;">Contact Support</a></li>
+                </ul>
+            </div>
+            
+            <div style="margin-top: 20px; padding: 15px; background-color: #fdb81e;">
+                <p style="font-size: 14px; text-align: center;"><strong>23,847</strong> people enrolled this week</p>
+            </div>
+        </aside>
+    </div>
+    
+    <footer class="footer">
+        <p>U.S. Department of Health & Human Services | <a href="https://hpkpn.ttrk.io/click">Privacy Policy</a> | <a href="https://hpkpn.ttrk.io/click">Terms of Use</a></p>
+        <p style="font-size: 14px; margin-top: 10px;">This is an enrollment assistance service for government benefit programs.</p>
+    </footer>
+</body>
+</html>
