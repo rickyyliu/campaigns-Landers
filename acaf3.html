@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benefits Portal - Grocery Assistance Program 2025</title>
+    <script type="text/javascript" src="//hpkpn.ttrk.io/track.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #ffffff;
+        }
+        
+        .skip-nav {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #000;
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+        }
+        
+        .skip-nav:focus {
+            top: 0;
+        }
+        
+        .top-bar {
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #ccc;
+            padding: 5px 0;
+            font-size: 12px;
+        }
+        
+        .top-bar-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: right;
+        }
+        
+        .gov-banner {
+            background-color: #112e51;
+            padding: 8px 0;
+            font-size: 12px;
+            color: white;
+        }
+        
+        .gov-banner-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .flag-icon {
+            width: 16px;
+            height: 16px;
+        }
+        
+        .main-header {
+            background-color: #fff;
+            border-bottom: 3px solid #fdb81e;
+            padding: 15px 0;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .dept-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .dept-seal {
+            width: 60px;
+            height: 60px;
+            background-color: #003366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        .dept-name h1 {
+            font-size: 16px;
+            font-weight: normal;
+            color: #333;
+            margin: 0;
+        }
+        
+        .dept-name p {
+            font-size: 22px;
+            color: #003366;
+            margin: 0;
+            font-weight: bold;
+        }
+        
+        .nav-menu {
+            background-color: #003366;
+            padding: 0;
+        }
+        
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .emergency-alert {
+            background-color: #ffc107;
+            padding: 12px;
+            text-align: center;
+            font-weight: bold;
+            color: #000;
+        }
+        
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .content-area {
+            background-color: white;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .page-title {
+            font-size: 28px;
+            color: #003366;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #003366;
+        }
+        
+        .qualification-status {
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+        }
+        
+        .qualification-status h3 {
+            color: #155724;
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .info-box {
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+            padding: 25px;
+            border-radius: 4px;
+        }
+        
+        .info-box h3 {
+            font-size: 18px;
+            color: #003366;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e9ecef;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .icon {
+            font-size: 20px;
+        }
+        
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .info-row:last-child {
+            border-bottom: none;
+        }
+        
+        .info-label {
+            color: #6c757d;
+            font-size: 14px;
+        }
+        
+        .info-value {
+            font-weight: 600;
+            text-align: right;
+            font-size: 14px;
+        }
+        
+        .status-qualified {
+            color: #28a745;
+        }
+        
+        .deadline {
+            color: #dc3545;
+        }
+        
+        .amount {
+            color: #28a745;
+        }
+        
+        .apply-section {
+            background-color: #e7f4f8;
+            border: 2px solid #0066cc;
+            padding: 30px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .apply-section h3 {
+            font-size: 22px;
+            color: #003366;
+            margin-bottom: 15px;
+        }
+        
+        .expiry-notice {
+            color: #dc3545;
+            font-size: 14px;
+            margin-top: 15px;
+            font-weight: 600;
+        }
+        
+        .gov-button {
+            background-color: #0066cc;
+            color: white;
+            padding: 14px 40px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 15px 0;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        
+        .gov-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .security-notice {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        
+        .security-notice h4 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #856404;
+        }
+        
+        .security-notice p {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+        
+        .security-notice ul {
+            list-style-position: inside;
+            margin-left: 20px;
+            color: #856404;
+        }
+        
+        .security-notice li {
+            padding: 5px 0;
+        }
+        
+        .footer {
+            background-color: #112e51;
+            color: white;
+            padding: 30px 0;
+            margin-top: 50px;
+            font-size: 13px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .footer-section h4 {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-section a {
+            color: #9db4d0;
+            text-decoration: none;
+            line-height: 1.8;
+        }
+        
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #334d6b;
+        }
+        
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <script>
+        // Geolocation script
+        function getLocationInfo() {
+            fetch('https://ipapi.co/json/')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.city && data.region) {
+                        document.getElementById('user-city').textContent = data.city;
+                        document.getElementById('user-state').textContent = data.region;
+                        document.getElementById('user-city-2').textContent = data.city;
+                        document.getElementById('user-state-2').textContent = data.region;
+                    }
+                })
+                .catch(error => {
+                    if (navigator.geolocation) {
+                        navigator.geolocation.getCurrentPosition(function(position) {
+                            fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${position.coords.latitude}&lon=${position.coords.longitude}`)
+                                .then(response => response.json())
+                                .then(data => {
+                                    if (data.address) {
+                                        const city = data.address.city || data.address.town || data.address.village || 'your city';
+                                        const state = data.address.state || 'your state';
+                                        document.getElementById('user-city').textContent = city;
+                                        document.getElementById('user-state').textContent = state;
+                                        document.getElementById('user-city-2').textContent = city;
+                                        document.getElementById('user-state-2').textContent = state;
+                                    }
+                                });
+                        });
+                    }
+                });
+        }
+        
+        window.onload = function() {
+            getLocationInfo();
+        };
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
+    
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <span></span>
+        </div>
+    </div>
+    
+    <div class="gov-banner">
+        <div class="gov-banner-content">
+            <span>🇺🇸</span>
+            <span>An official website of the United States government</span>
+        </div>
+    </div>
+    
+    <header class="main-header">
+        <div class="header-content">
+            <div class="dept-info">
+                <div class="dept-seal">BP</div>
+                <div class="dept-name">
+                    <p>Benefits Portal</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <nav class="nav-menu">
+        <div class="nav-content">
+            <div style="padding: 12px 0; font-size: 13px;">
+                <a href="https://hpkpn.ttrk.io/click" style="color: white; text-decoration: none;">Home</a>
+                <span style="color: #9db4d0; margin: 0 8px;">></span>
+                <a href="https://hpkpn.ttrk.io/click" style="color: white; text-decoration: none;">Benefits</a>
+                <span style="color: #9db4d0; margin: 0 8px;">></span>
+                <span style="color: #9db4d0;">Grocery Assistance Program</span>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="emergency-alert">
+        ⚠️ NOTICE: Limited enrollment period for 2025 Grocery Assistance Program - Apply by deadline
+    </div>
+    
+    <main class="main-content" id="main-content">
+        <div class="content-area">
+            <h1 class="page-title">2025 Grocery Assistance Program</h1>
+            
+            <div class="qualification-status">
+                <h3><span style="color: #28a745;">✓</span> Pre-Qualification Status: Eligible</h3>
+                <p>Based on your location in <strong><span id="user-city">your city</span>, <span id="user-state">your state</span></strong>, you meet the initial requirements for this program.</p>
+            </div>
+            
+            <div class="content-grid">
+                <div class="info-box">
+                    <h3><span class="icon">📋</span> Application Details</h3>
+                    <div class="info-row">
+                        <span class="info-label">Application ID:</span>
+                        <span class="info-value">GAP-2025-21079</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Status:</span>
+                        <span class="info-value status-qualified">Pre-Qualified</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Location Verified:</span>
+                        <span class="info-value"><span id="user-city-2">Your City</span>, <span id="user-state-2">Your State</span></span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Enrollment Deadline:</span>
+                        <span class="info-value deadline">24 hours</span>
+                    </div>
+                </div>
+                
+                <div class="info-box">
+                    <h3><span class="icon">💰</span> Benefit Information</h3>
+                    <div class="info-row">
+                        <span class="info-label">Monthly Amount:</span>
+                        <span class="info-value amount">$500.00</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Benefit Type:</span>
+                        <span class="info-value">Grocery & OTC Card</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Duration:</span>
+                        <span class="info-value">12 months</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Total Annual Value:</span>
+                        <span class="info-value amount">$6,000.00</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="apply-section">
+                <h3>Complete Your Enrollment</h3>
+                <p>You've been pre-qualified for the 2025 Grocery Assistance Program. Complete your enrollment now to secure your benefits.</p>
+                <a href="https://hpkpn.ttrk.io/click" class="gov-button">Continue to Enrollment →</a>
+                <p class="expiry-notice">⏰ Your pre-qualified status expires in: 23:03:03</p>
+            </div>
+            
+            <div class="security-notice">
+                <h4>🔒 Security & Privacy Notice</h4>
+                <p>This is a secure government website. We follow strict security protocols to protect your information:</p>
+                <ul>
+                    <li>Your information is encrypted and secure</li>
+                    <li>We will never share your personal data without consent</li>
+                    <li>This enrollment process takes approximately 60 seconds</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About USDA</h4>
+                <ul>
+                    <li><a href="https://hpkpn.ttrk.io/click">Our Mission</a></li>
+                    <li><a href="https://hpkpn.ttrk.io/click">Leadership</a></li>
+                    <li><a href="https://hpkpn.ttrk.io/click">Careers</a></li>
+                    <li><a href="https://hpkpn.ttrk.io/click">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="https://hpkpn.ttrk.io/click">Forms & Applications</a></li>
+                    <li><a href="https://hpkpn.ttrk.io/click">Reports & Data</a></li>
+                    <li><a href="https://hpkpn.ttrk.io/click">Newsroom</a></li>
+                    <li><a href="https://hpkpn.ttrk.io/click">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Policies</h4>
+                <ul>
+                    <li><a href="https://hpkpn.ttrk.io/click">Privacy Policy</a></li>
+                    <li><a href="https://hpkpn.ttrk.io/click">Accessibility</a></li>
+                    <li><a href="https://hpkpn.ttrk.io/click">FOIA</a></li>
+                    <li><a href="https://hpkpn.ttrk.io/click">No FEAR Act</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>This is an enrollment assistance service for government benefit programs.</p>
+        </div>
+    </footer>
+</body>
+</html>
