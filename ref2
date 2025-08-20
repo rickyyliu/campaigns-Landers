@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 Homeowner Cashback Program - Benefits Portal</title>
+    <script type="text/javascript" src="//hpkpn.ttrk.io/track.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #1b1b1b;
+            background-color: #f0f0f0;
+        }
+        
+        /* Top Banner */
+        .top-banner {
+            background-color: #112e51;
+            color: white;
+            padding: 8px 0;
+            font-size: 14px;
+        }
+        
+        .top-banner-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .us-flag {
+            width: 20px;
+            height: 14px;
+            margin-right: 5px;
+        }
+        
+        /* Header */
+        .header {
+            background-color: white;
+            border-bottom: 1px solid #dfe1e2;
+            padding: 20px 0;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logo {
+            background-color: #003366;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+        }
+        
+        .site-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #1b1b1b;
+        }
+        
+        /* Breadcrumb */
+        .breadcrumb {
+            background-color: #003366;
+            padding: 12px 0;
+            border-bottom: 1px solid #dfe1e2;
+        }
+        
+        .breadcrumb-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            font-size: 14px;
+        }
+        
+        .breadcrumb a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        .breadcrumb-separator {
+            margin: 0 8px;
+            color: #9db4d0;
+        }
+        
+        .breadcrumb-current {
+            color: #9db4d0;
+        }
+        
+        /* Yellow Notice Bar */
+        .notice-bar {
+            background-color: #fdb81e;
+            padding: 12px 0;
+            font-size: 14px;
+            font-weight: 600;
+            text-align: center;
+        }
+        
+        .notice-icon {
+            margin-right: 5px;
+        }
+        
+        /* Main Content */
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .page-title {
+            font-size: 40px;
+            font-weight: 700;
+            color: #1b1b1b;
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+        
+        /* Pre-Qualification Status */
+        .status-box {
+            background-color: #e7f4e4;
+            border: 1px solid #94bfa2;
+            border-radius: 4px;
+            padding: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .status-icon {
+            font-size: 24px;
+            color: #2e8540;
+        }
+        
+        .status-text {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1b1b1b;
+        }
+        
+        .location-text {
+            font-size: 14px;
+            color: #5b616b;
+            margin-top: 5px;
+        }
+        
+        /* Program Description */
+        .program-description {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #1b1b1b;
+        }
+        
+        /* Benefit Amount Box */
+        .benefit-box {
+            background-color: #fff1d2;
+            border: 2px solid #fdb81e;
+            border-radius: 4px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .benefit-amount {
+            font-size: 48px;
+            font-weight: 700;
+            color: #1b1b1b;
+            margin-bottom: 10px;
+        }
+        
+        .benefit-label {
+            font-size: 20px;
+            color: #5b616b;
+            margin-bottom: 15px;
+        }
+        
+        .benefit-note {
+            font-size: 14px;
+            color: #5b616b;
+        }
+        
+        /* Info Grid */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .info-card {
+            background-color: white;
+            border: 1px solid #dfe1e2;
+            border-radius: 4px;
+            padding: 25px;
+        }
+        
+        .info-card-header {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1b1b1b;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .info-icon {
+            font-size: 24px;
+            color: #0071bc;
+        }
+        
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .info-row:last-child {
+            border-bottom: none;
+        }
+        
+        .info-label {
+            color: #5b616b;
+            font-size: 14px;
+        }
+        
+        .info-value {
+            font-weight: 600;
+            color: #1b1b1b;
+            text-align: right;
+        }
+        
+        .status-eligible {
+            color: #2e8540;
+        }
+        
+        .value-highlight {
+            color: #2e8540;
+            font-size: 16px;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background-color: #e1f3f8;
+            border: 1px solid #97d4e9;
+            border-radius: 4px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .cta-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: #1b1b1b;
+            margin-bottom: 15px;
+        }
+        
+        .cta-description {
+            font-size: 16px;
+            color: #5b616b;
+            margin-bottom: 30px;
+        }
+        
+        .cta-button {
+            background-color: #0071bc;
+            color: white;
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #205493;
+        }
+        
+        .cta-arrow {
+            margin-left: 10px;
+        }
+        
+        .expiry-notice {
+            font-size: 14px;
+            color: #d83933;
+            margin-top: 20px;
+            font-weight: 600;
+        }
+        
+        /* Security Notice */
+        .security-notice {
+            background-color: #fff1d2;
+            border-left: 4px solid #fdb81e;
+            padding: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .security-header {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1b1b1b;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .security-icon {
+            color: #fdb81e;
+        }
+        
+        .security-list {
+            list-style-position: inside;
+            color: #5b616b;
+            font-size: 14px;
+        }
+        
+        .security-list li {
+            margin-bottom: 8px;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #112e51;
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #dfe1e2;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #334d6b;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #9db4d0;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 28px;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .benefit-amount {
+                font-size: 36px;
+            }
+            
+            .cta-section {
+                padding: 30px 20px;
+            }
+            
+            .cta-title {
+                font-size: 24px;
+            }
+            
+            .cta-button {
+                padding: 12px 30px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Banner -->
+    <div class="top-banner">
+        <div class="top-banner-content">
+            <span class="us-flag">🇺🇸</span>
+        </div>
+    </div>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">BP</div>
+            <div class="site-title">Benefits Portal</div>
+        </div>
+    </header>
+    
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <div class="breadcrumb-content">
+            <a href="https://hpkpn.ttrk.io/click">Home</a>
+            <span class="breadcrumb-separator">></span>
+            <a href="https://hpkpn.ttrk.io/click">Benefits</a>
+            <span class="breadcrumb-separator">></span>
+            <span style="color: #9db4d0;">Homeowner Cashback Program</span>
+        </div>
+    </nav>
+    
+    <!-- Notice Bar -->
+    <div class="notice-bar">
+        <span class="notice-icon">⚠️</span>
+        NOTICE: Limited program period for 2025 Homeowner Cashback Program - Apply by deadline
+    </div>
+    
+    <!-- Main Content -->
+    <main class="main-container">
+        <h1 class="page-title">2025 Homeowner Cashback Program</h1>
+        
+        <!-- Pre-Qualification Status -->
+        <div class="status-box">
+            <span class="status-icon">✓</span>
+            <div>
+                <div class="status-text">Pre-Qualification Status: Eligible</div>
+                <div class="location-text">Based on your location in San Jose, California, you meet the initial requirements for this program.</div>
+            </div>
+        </div>
+        
+        <!-- Program Description -->
+        <div class="program-description">
+            <p>(Washington, D.C.) - If you were born before 2004, have a credit score <strong>above 620</strong> and <strong>own a single family home worth more than $160k</strong> - you are advised to <strong>take advantage</strong> of the new Homeowner Cashback Program that could <strong style="text-decoration: underline;">put $185,000 in your pocket!</strong></p>
+        </div>
+        
+        <!-- Benefit Amount -->
+        <div class="benefit-box">
+            <div class="benefit-amount">$185,000</div>
+            <div class="benefit-label">Maximum Homeowner Benefit</div>
+            <div class="benefit-note">Annual benefit value up to $185,000</div>
+        </div>
+        
+        <!-- Info Grid -->
+        <div class="info-grid">
+            <!-- Application Details -->
+            <div class="info-card">
+                <h3 class="info-card-header">
+                    <span class="info-icon">📋</span>
+                    Application Details
+                </h3>
+                <div class="info-row">
+                    <span class="info-label">Application ID:</span>
+                    <span class="info-value">HCP-2025-21079</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Status:</span>
+                    <span class="info-value status-eligible">Pre-Qualified</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Location Verified:</span>
+                    <span class="info-value">San Jose, California</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Application Deadline:</span>
+                    <span class="info-value" style="color: #d83933;">24 hours</span>
+                </div>
+            </div>
+            
+            <!-- Benefit Information -->
+            <div class="info-card">
+                <h3 class="info-card-header">
+                    <span class="info-icon">💰</span>
+                    Benefit Information
+                </h3>
+                <div class="info-row">
+                    <span class="info-label">Monthly Amount:</span>
+                    <span class="info-value value-highlight">Up to $15,416</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Benefit Type:</span>
+                    <span class="info-value">FaCOP Initiative</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Duration:</span>
+                    <span class="info-value">12 months</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Total Annual Value:</span>
+                    <span class="info-value value-highlight">$185,000</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h2 class="cta-title">Complete Your Application</h2>
+            <p class="cta-description">You've been pre-qualified for the 2025 Homeowner Cashback Program. Complete your application now to secure your benefits.</p>
+            <a href="https://hpkpn.ttrk.io/click" class="cta-button">
+                CONTINUE TO APPLICATION
+                <span class="cta-arrow">→</span>
+            </a>
+            <div class="expiry-notice">⏱️ Your pre-qualified status expires in: 23:59:03</div>
+        </div>
+        
+        <!-- Security Notice -->
+        <div class="security-notice">
+            <h3 class="security-header">
+                <span class="security-icon">🔒</span>
+                Security & Privacy Notice
+            </h3>
+            <p style="margin-bottom: 15px;">This is a secure portal. We follow strict security protocols to protect your information:</p>
+            <ul class="security-list">
+                <li>Your information is encrypted and secure</li>
+                <li>We will never share your personal data without consent</li>
+                <li>This application process takes approximately 60 seconds</li>
+            </ul>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>About USDA</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://hpkpn.ttrk.io/click">Our Mission</a></li>
+                        <li><a href="https://hpkpn.ttrk.io/click">Leadership</a></li>
+                        <li><a href="https://hpkpn.ttrk.io/click">Careers</a></li>
+                        <li><a href="https://hpkpn.ttrk.io/click">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://hpkpn.ttrk.io/click">Forms & Applications</a></li>
+                        <li><a href="https://hpkpn.ttrk.io/click">Reports & Data</a></li>
+                        <li><a href="https://hpkpn.ttrk.io/click">Newsroom</a></li>
+                        <li><a href="https://hpkpn.ttrk.io/click">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Policies</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://hpkpn.ttrk.io/click">Privacy Policy</a></li>
+                        <li><a href="https://hpkpn.ttrk.io/click">Accessibility</a></li>
+                        <li><a href="https://hpkpn.ttrk.io/click">FOIA</a></li>
+                        <li><a href="https://hpkpn.ttrk.io/click">No FEAR Act</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&nbsp;</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
