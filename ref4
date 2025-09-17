@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homeowner Cashback Program | Federal Reserve Economic Data</title>
+    <script type="text/javascript" src="//hpkpn.ttrk.io/track.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Top Bar */
+        .top-bar {
+            background-color: #003366;
+            color: white;
+            padding: 8px 0;
+            font-size: 13px;
+        }
+        
+        .top-bar-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: right;
+        }
+        
+        /* Header */
+        .header {
+            background-color: white;
+            border-bottom: 4px solid #003366;
+            padding: 30px 0;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #003366;
+            margin-bottom: 5px;
+        }
+        
+        .tagline {
+            color: #666;
+            font-size: 14px;
+            font-style: italic;
+        }
+        
+        /* Breadcrumb */
+        .breadcrumb-nav {
+            background-color: #f0f0f0;
+            padding: 15px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .breadcrumb-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            font-size: 14px;
+        }
+        
+        .breadcrumb-nav a {
+            color: #003366;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .breadcrumb-nav a:hover {
+            text-decoration: underline;
+        }
+        
+        .breadcrumb-separator {
+            margin: 0 10px;
+            color: #999;
+        }
+        
+        .current-page {
+            color: #666;
+        }
+        
+        /* Alert Banner */
+        .alert-banner {
+            background-color: #fffbf0;
+            border: 1px solid #f0ad4e;
+            color: #8a6d3b;
+            padding: 15px;
+            margin: 20px auto;
+            max-width: 1200px;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        /* Main Container */
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 0;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+        }
+        
+        /* Article */
+        .article {
+            padding: 40px 60px;
+        }
+        
+        .article-date {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 36px;
+            line-height: 1.3;
+            color: #003366;
+            margin-bottom: 30px;
+            font-weight: normal;
+        }
+        
+        .lead-paragraph {
+            font-size: 19px;
+            line-height: 1.7;
+            color: #444;
+            margin-bottom: 30px;
+            border-left: 3px solid #003366;
+            padding-left: 20px;
+        }
+        
+        .article-content p {
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #444;
+        }
+        
+        /* Requirements Section */
+        .requirements-section {
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            padding: 30px;
+            margin: 40px 0;
+        }
+        
+        .requirements-section h3 {
+            font-size: 22px;
+            color: #003366;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+        
+        .requirements-section ol {
+            margin-left: 25px;
+        }
+        
+        .requirements-section li {
+            font-size: 17px;
+            margin-bottom: 10px;
+            color: #444;
+        }
+        
+        /* Process Section */
+        .process-wrapper {
+            background-color: #003366;
+            margin: 40px -60px;
+            padding: 40px 60px;
+            color: white;
+        }
+        
+        .process-title {
+            font-size: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: normal;
+        }
+        
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .process-step {
+            text-align: center;
+        }
+        
+        .step-icon {
+            width: 80px;
+            height: 80px;
+            background-color: white;
+            color: #003366;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 36px;
+            font-weight: bold;
+        }
+        
+        .step-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+        
+        .step-description {
+            font-size: 16px;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+        
+        /* CTA Section */
+        .cta-container {
+            text-align: center;
+            padding: 50px 60px;
+            background-color: #fafafa;
+            margin: 0 -60px;
+        }
+        
+        .cta-heading {
+            font-size: 30px;
+            color: #003366;
+            margin-bottom: 40px;
+            font-weight: normal;
+        }
+        
+        .button-row {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-btn {
+            background-color: #003366;
+            color: white;
+            padding: 18px 50px;
+            text-decoration: none;
+            font-size: 18px;
+            border: 2px solid #003366;
+            transition: all 0.3s;
+            font-family: Arial, sans-serif;
+        }
+        
+        .cta-btn:hover {
+            background-color: white;
+            color: #003366;
+        }
+        
+        /* Tip Section */
+        .tip-container {
+            background-color: #e8f4fd;
+            border: 1px solid #bee5eb;
+            padding: 25px;
+            margin: 40px 0;
+            border-radius: 4px;
+        }
+        
+        .tip-container strong {
+            color: #004085;
+        }
+        
+        .tip-container a {
+            color: #003366;
+            font-weight: bold;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #003366;
+            color: white;
+            padding: 50px 60px 30px;
+            margin-top: 60px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            font-weight: normal;
+            border-bottom: 1px solid #1a4d80;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column a {
+            color: #cce7ff;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        
+        .footer-column a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        .footer-copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #1a4d80;
+            color: #cce7ff;
+            font-size: 14px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .article {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 28px;
+            }
+            
+            .process-wrapper {
+                margin: 30px -20px;
+                padding: 40px 20px;
+            }
+            
+            .process-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .cta-container {
+                padding: 40px 20px;
+                margin: 0 -20px;
+            }
+            
+            .button-row {
+                flex-direction: column;
+            }
+            
+            .cta-btn {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .footer {
+                padding: 40px 20px 20px;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            Federal Reserve Economic Data | Research Division
+        </div>
+    </div>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">Federal Reserve Economic Bulletin</div>
+            <div class="tagline">Analysis and Research on U.S. Economic Policy</div>
+        </div>
+    </header>
+    
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-nav">
+        <div class="breadcrumb-content">
+            <a href="https://hpkpn.ttrk.io/click">Home</a>
+            <span class="breadcrumb-separator">/</span>
+            <a href="https://hpkpn.ttrk.io/click">Money & Finance</a>
+            <span class="breadcrumb-separator">/</span>
+            <a href="https://hpkpn.ttrk.io/click">Homeowner Resources</a>
+            <span class="breadcrumb-separator">/</span>
+            <span class="current-page">FaCOP Initiative</span>
+        </div>
+    </div>
+    
+    <!-- Alert Banner -->
+    <div class="alert-banner">
+        ⚠ NOTICE: Limited program period for 2025 Homeowner Cashback Program - Apply by deadline
+    </div>
+    
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Article -->
+        <article class="article">
+            <div class="article-date">Published: July 2025 | Economic Policy Update</div>
+            
+            <h1>In September 2025, American Homeowners Get Up To $185,000 With The Gov Backed "FaCOP" Initiative.</h1>
+            
+            <p class="lead-paragraph">
+                (Washington, D.C.) - If you were born before 2004, have a credit score <strong>above 620</strong> and <strong>own a single family home worth more than $160k</strong> - you are advised to <strong>take advantage</strong> of the new Homeowner Cashback Program that could <strong style="text-decoration: underline;">put $185,000 in your pocket!</strong>
+            </p>
+            
+            <!-- Feature Image -->
+            <div style="margin: 30px 0; text-align: center;">
+                <img src="https://res.cloudinary.com/dndik3mpf/image/upload/v1755657346/aa1a3c7376456215537e65f7ec639991_gvi7la.webp" alt="US Capitol Building" style="max-width: 100%; height: auto;">
+            </div>
+            
+            <div class="article-content">
+                <p>Inflation is through the roof right now and smart Homeowners are using this program to get up to $185,000 in cash! There is <strong>NO COST</strong> to see if you qualify & <strong>no requirements</strong> on how to spend it.</p>
+                
+                <p>In fact, many homeowners are <strong>paying for home renovations</strong>, <strong>paying off debts</strong> & even <strong>taking vacations!</strong></p>
+            </div>
+            
+            <!-- Requirements -->
+            <div class="requirements-section">
+                <h3>There are only 3 requirements:</h3>
+                <ol>
+                    <li>Must be a US Citizen</li>
+                    <li>Must own a <strong>Single Family Home Worth Over $160k</strong></li>
+                    <li>Must have a <strong>Credit Score Above 620</strong></li>
+                </ol>
+            </div>
+            
+            <!-- Process Section -->
+            <div class="process-wrapper">
+                <h2 class="process-title">Want to See How Much You Can Get? Here's How</h2>
+                <div class="process-grid">
+                    <div class="process-step">
+                        <div class="step-icon">1</div>
+                        <h3 class="step-title">Step 1</h3>
+                        <p class="step-description">Click the year you purchased your home to instantly check your eligibility for free.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-icon">2</div>
+                        <h3 class="step-title">Step 2</h3>
+                        <p class="step-description">View your cash-out offer and claim it!</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CTA Section -->
+            <div class="cta-container">
+                <h2 class="cta-heading">When Did You Buy Your Home?</h2>
+                <div class="button-row">
+                    <a href="https://hpkpn.ttrk.io/click" class="cta-btn">Before 1985</a>
+                    <a href="https://hpkpn.ttrk.io/click" class="cta-btn">After 1985</a>
+                </div>
+            </div>
+            
+            <!-- Tip -->
+            <div class="tip-container">
+                <p><strong>HOT TIP:</strong> This program is particularly popular with homeowners who are on a fixed income or are on social security and need extra cash to consolidate high interest debts or finally start that home improvement project. <strong>Better yet, if you have a job and have good or excellent credit, you can qualify for the full $185,000</strong> <a href="https://hpkpn.ttrk.io/click">See how much you could get >></a></p>
+            </div>
+        </article>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>Money & Finance</h4>
+                    <ul>
+                        <li><a href="https://hpkpn.ttrk.io/click">Personal Finance</a></li>
+                        <li><a href="https://hpkpn.ttrk.io/click">Mortgages</a></li>
+                        <li><a href="https://hpkpn.ttrk.io/click">Real Estate</a></li>
+                        <li><a href="https://hpkpn.ttrk.io/click">Retirement</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://hpkpn.ttrk.io/click">Calculators</a></li>
+                        <li><a href="https://hpkpn.ttrk.io/click">Government Programs</a></li>
+                        <li><a href="https://hpkpn.ttrk.io/click">Tax Center</a></li>
+                        <li><a href="https://hpkpn.ttrk.io/click">Credit Scores</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="https://hpkpn.ttrk.io/click">About Us</a></li>
+                        <li><a href="https://hpkpn.ttrk.io/click">Contact</a></li>
+                        <li><a href="https://hpkpn.ttrk.io/click">Privacy Policy</a></li>
+                        <li><a href="https://hpkpn.ttrk.io/click">Terms of Use</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>© 2025 Federal Reserve Economic Bulletin. All Rights Reserved.</p>
+                <p style="margin-top: 10px;">Research Division Publication</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
