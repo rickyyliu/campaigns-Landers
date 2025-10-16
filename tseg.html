@@ -22,6 +22,56 @@
             line-height: 1.6;
         }
         
+        /* Header Styles */
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+        
+        .header-logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .header-logo img {
+            height: 50px;
+            width: auto;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: #1e5bc6;
+        }
+        
+        /* Main Content Styles */
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -94,6 +144,18 @@
         }
         
         @media (max-width: 768px) {
+            .header-container {
+                padding: 0 15px;
+            }
+            
+            nav ul {
+                gap: 20px;
+            }
+            
+            nav a {
+                font-size: 14px;
+            }
+            
             h1 {
                 font-size: 24px;
             }
@@ -106,6 +168,24 @@
     </style>
 </head>
 <body>
+    <!-- Header Navigation -->
+    <header>
+        <div class="header-container">
+            <div class="header-logo">
+                <img src="https://res.cloudinary.com/dndik3mpf/image/upload/v1760550184/stone_gate_logo_xu4p0b.png" alt="Stonegate Firm">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="timeshare-exit.html">Timeshare Exit</a></li>
+                    <li><a href="our-attorney.html">Our Attorney</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
     <!-- Main Content -->
     <div class="main-content">
         <div class="container">
