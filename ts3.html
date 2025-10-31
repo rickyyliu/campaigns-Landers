@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeshare Exit Initiative</title>
+    <script type="text/javascript" src="//hpkpn.ttrk.io/track.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 650px;
+            margin: 20px auto;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header {
+            background-color: #1e4b8b;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .logo {
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        
+        .header h1 {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 0;
+        }
+        
+        .urgent-banner {
+            background-color: #f39c12;
+            color: #333;
+            padding: 15px 30px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        
+        .content {
+            padding: 40px 30px;
+        }
+        
+        .date-location {
+            color: #666;
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 25px;
+            font-size: 15px;
+        }
+        
+        .intro {
+            margin-bottom: 35px;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        
+        .intro strong {
+            font-weight: 600;
+        }
+        
+        .refund-amount {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f0f8ff;
+            border-radius: 5px;
+        }
+        
+        .refund-amount h3 {
+            color: #1e4b8b;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .amount-counter {
+            font-size: 42px;
+            font-weight: 700;
+            color: #27ae60;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+            padding: 25px;
+            background-color: #fafbfc;
+            border-left: 4px solid #1e4b8b;
+        }
+        
+        .section h2 {
+            color: #1e4b8b;
+            font-size: 20px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .checklist li {
+            padding: 10px 0 10px 30px;
+            position: relative;
+            font-size: 15px;
+        }
+        
+        .checklist li:before {
+            content: "✓";
+            color: #27ae60;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 18px;
+        }
+        
+        .pain-point {
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .pain-point h3 {
+            color: #333;
+            font-size: 17px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .pain-point p {
+            color: #666;
+            font-size: 15px;
+            padding-left: 35px;
+        }
+        
+        .pain-icon {
+            width: 25px;
+            height: 25px;
+            background-color: #e74c3c;
+            color: white;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: bold;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+        
+        .stats-section {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 40px 20px 20px;
+            margin: 30px 0 0;
+            background-color: white;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 42px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 13px;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 400;
+        }
+        
+        .guarantee-section {
+            background-color: #eafaf1;
+            border: 2px solid #27ae60;
+            padding: 20px;
+            margin: 20px 0 0;
+            text-align: center;
+            border-radius: 5px;
+        }
+        
+        .guarantee-section p:first-child {
+            color: #186a3b;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .guarantee-section p:last-child {
+            color: #239b56;
+            font-size: 14px;
+            margin: 0;
+        }
+        
+        .cta-section {
+            background-color: #1e4b8b;
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+            margin: 0 -30px;
+            margin-bottom: 30px;
+        }
+        
+        .cta-section h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .cta-section p {
+            margin-bottom: 25px;
+            font-size: 16px;
+        }
+        
+        .cta-button {
+            background-color: #f39c12;
+            color: #333;
+            padding: 18px 40px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 4px;
+            display: inline-block;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background-color: #e67e22;
+            transform: translateY(-2px);
+        }
+        
+        .disclaimer {
+            margin-top: 25px;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .footer {
+            background-color: #666;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+        
+        .warning-box {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            margin-bottom: 25px;
+            border-radius: 4px;
+            text-align: center;
+        }
+        
+        .warning-box strong {
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">🏠</div>
+            <h1>Stop Paying For Your Timeshare Nightmare</h1>
+        </div>
+        
+        <div class="urgent-banner">
+            Get Out Legally - Without Ruining Your Credit
+        </div>
+        
+        <div class="content">
+            <div class="intro">
+                <strong>If you own a timeshare and you feel misled or pressured into buying, we can help you exit legally while protecting your credit.</strong> No more maintenance fees. No more annual increases. Just freedom from your timeshare.
+            </div>
+            
+            <div class="refund-amount">
+                <h3>Average Refund Recovered:</h3>
+                <div class="amount-counter">$<span id="counter">0</span></div>
+                <p style="font-size: 14px; color: #666; margin-top: 5px;"><em>*Not all timeshare owners qualify. Results may vary.</em></p>
+            </div>
+            
+            <div class="pain-point">
+                <h3><span class="pain-icon">$</span> Drowning in Maintenance Fees?</h3>
+                <p>Fees that never stop rising, even when you can't use it</p>
+            </div>
+            
+            <div class="pain-point">
+                <h3><span class="pain-icon">X</span> Can't Sell It?</h3>
+                <p>Your timeshare is worth nothing on resale market</p>
+            </div>
+            
+            <div class="pain-point">
+                <h3><span class="pain-icon">!</span> Don't Burden Your Family</h3>
+                <p>Your kids don't want to inherit this financial trap</p>
+            </div>
+            
+            <div class="warning-box">
+                <strong>⚠️ Every Month You Wait Costs You More Money</strong><br>
+                Your next maintenance fee is coming whether you use it or not
+            </div>
+            
+            <div class="cta-section">
+                <h2>Get Your Exit Strategy Today</h2>
+                <p>Find out how much money you can recover from your timeshare</p>
+                <a href="https://hpkpn.ttrk.io/click" class="cta-button">GET MY FREE CONSULTATION</a>
+                <p class="disclaimer">100% Free • No Obligation • Fast Response</p>
+            </div>
+            
+            <div class="qualifications">
+                <div class="stats-section">
+                    <div class="stat-item">
+                        <div class="stat-number">15K+</div>
+                        <div class="stat-label">FAMILIES FREED</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">SUCCESS RATE</div>
+                    </div>
+                </div>
+                <div class="guarantee-section">
+                    <p>100% Money-Back Guarantee</p>
+                    <p>If we can't help you exit, you pay nothing</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <script>
+        // Smooth counter animation
+        function animateCounter() {
+            const counter = document.getElementById('counter');
+            const target = 10247;
+            const duration = 1750; // 1.75 seconds
+            const startTime = performance.now();
+            
+            function updateCounter(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                
+                // Easing function for smooth animation
+                const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+                
+                const current = Math.floor(easeOutQuart * target);
+                counter.textContent = current.toLocaleString();
+                
+                if (progress < 1) {
+                    requestAnimationFrame(updateCounter);
+                }
+            }
+            
+            requestAnimationFrame(updateCounter);
+        }
+        
+        // Start animation when page loads
+        window.addEventListener('load', animateCounter);
+    </script>
+</body>
+</html>
