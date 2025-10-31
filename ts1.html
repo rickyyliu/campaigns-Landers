@@ -293,8 +293,8 @@
         function animateCounter() {
             const counter = document.getElementById('counter');
             const target = 10247;
-            const duration = 2500; // 2.5 seconds
-            const steps = 60;
+            const duration = 2000; // 2 seconds (faster)
+            const steps = 100; // More steps for smoother animation
             const stepDuration = duration / steps;
             const increment = target / steps;
             
@@ -308,13 +308,16 @@
                 }
                 
                 // Format with comma and dollar sign
-                counter.textContent = '$' + Math.floor(current).toLocaleString();
+                counter.textContent = '
+    </script>
+</body>
+</html> + Math.floor(current).toLocaleString();
             }, stepDuration);
         }
         
         // Start animation when page loads
         window.addEventListener('load', () => {
-            setTimeout(animateCounter, 500); // Small delay for effect
+            setTimeout(animateCounter, 300); // Shorter delay for snappier feel
         });
     </script>
 </body>
