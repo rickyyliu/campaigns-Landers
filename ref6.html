@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Relief Stimulus</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Header */
+        .header {
+            background-color: #2b3e5f;
+            padding: 15px 0;
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            color: #ff3333;
+            font-size: 20px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo-icon {
+            width: 30px;
+            height: 30px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .logo-icon svg {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .advertorial-text {
+            color: white;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        h1 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 30px;
+            line-height: 1.4;
+            font-weight: bold;
+        }
+        
+        .red-text {
+            color: #ff0000;
+        }
+        
+        .subtitle {
+            text-align: left;
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        
+        .bold-text {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 30px;
+            line-height: 1.5;
+            text-align: left;
+        }
+        
+        .trump-image-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .trump-image {
+            max-width: 100%;
+            height: auto;
+            max-height: 400px;
+            width: auto;
+        }
+        
+        .italic-text {
+            font-style: italic;
+            text-align: center;
+            font-size: 18px;
+            margin: 30px 0;
+        }
+        
+        .requirements-title {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        
+        .requirements-list {
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+        
+        .requirements-list ol {
+            margin-left: 30px;
+        }
+        
+        .requirements-list li {
+            margin-bottom: 5px;
+        }
+        
+        .check-qualify-section {
+            margin: 40px 0;
+        }
+        
+        .section-title {
+            font-size: 28px;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+        
+        .step-text {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .link-text {
+            color: #0066cc;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        
+        .age-section {
+            margin-top: 60px;
+            text-align: center;
+        }
+        
+        .age-title {
+            font-size: 36px;
+            margin-bottom: 40px;
+            font-weight: normal;
+        }
+        
+        .age-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .age-button {
+            background-color: #ff7700;
+            color: white;
+            border: none;
+            padding: 25px 40px;
+            font-size: 26px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .age-button:hover {
+            background-color: #ff5500;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #2b3e5f;
+            color: white;
+            padding: 40px 20px;
+            margin-top: 100px;
+            text-align: center;
+            font-size: 12px;
+        }
+        
+        .footer-text {
+            max-width: 900px;
+            margin: 0 auto 20px;
+            line-height: 1.8;
+            color: #cccccc;
+        }
+        
+        .copyright {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        
+        .footer-links {
+            color: white;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 35 25" xmlns="http://www.w3.org/2000/svg">
+                        <!-- American flag style icon -->
+                        <path d="M5 5 Q15 0, 25 5 L25 15 Q15 20, 5 15 Z" fill="#ff3333" stroke="none"/>
+                        <rect x="5" y="7" width="20" height="2" fill="white"/>
+                        <rect x="5" y="11" width="20" height="2" fill="white"/>
+                    </svg>
+                </div>
+                <span>American BenefitsCo</span>
+            </div>
+            <div class="advertorial-text">ADVERTORIAL</div>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="container">
+        <h1>In September, <span class="red-text">American Homeowners Receive Home Relief Package</span> To Spend On Vacations, Pay Off Credit Cards, Make Renovations, or Retire Comfortably</h1>
+        
+        <p class="subtitle">Millions of homeowners are now rushing to join this program before funding runs out and big banks are terrified!</p>
+        
+        <p class="bold-text">If you were born before 2004 and own a home - you are advised to take advantage of a new Home Equity Cashback Program could put $185,000s in your pocket as soon as 3-5 days from now.</p>
+        
+        <!-- Trump Image -->
+        <div class="trump-image-container">
+            <img src="https://res.cloudinary.com/dndik3mpf/image/upload/v1762542358/image2_ozmg05.jpg" alt="Presidential podium" class="trump-image">
+        </div>
+        
+        <p class="italic-text">There is <strong>NO COST</strong> to see how much your home would qualify for. Tap below and see how much cash you could get back!</p>
+        
+        <div class="requirements-title">There are only 2 requirements:</div>
+        <div class="requirements-list">
+            <ol>
+                <li>Must be a US Citizen</li>
+                <li>Must own your home</li>
+            </ol>
+        </div>
+        
+        <div class="check-qualify-section">
+            <h2 class="section-title">Check if you Qualify for Home Relief Stimulus Today</h2>
+            
+            <p class="step-text">Step 1: <span class="link-text">Simply tap below & enter your zip on the next page.</span></p>
+            
+            <p class="step-text">Step 2: Select your age below (takes less than a minute) to get started</p>
+        </div>
+        
+        <!-- Age Selection -->
+        <div class="age-section">
+            <h2 class="age-title">Select Your Age:</h2>
+            
+            <div class="age-grid">
+                <button class="age-button">18-25</button>
+                <button class="age-button">26-35</button>
+                <button class="age-button">36-45</button>
+                <button class="age-button">46-55</button>
+                <button class="age-button">56-64</button>
+                <button class="age-button">65 & Up</button>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer-text">THIS IS AN ADVERTISEMENT AND NOT AN ACTUAL NEWS ARTICLE, BLOG, OR CONSUMER PROTECTION UPDATE</p>
+        
+        <p class="copyright">Copyright © 2025. All Rights Reserved</p>
+        
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a> | <a href="#">Terms</a>
+        </div>
+    </footer>
+</body>
+</html>
